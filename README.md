@@ -1,6 +1,6 @@
 # PHP implementation of Circuit Breaker Pattern  
 
-[![Build Status](https://travis-ci.org/leocarmo/circuit-breaker-php.svg?branch=master)](https://travis-ci.org/leocarmo/circuit-breaker-php)
+[![Tests](https://github.com/leocarmo/circuit-breaker-php/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/leocarmo/circuit-breaker-php/actions/workflows/tests.yml)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/leocarmo/circuit-breaker-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/leocarmo/circuit-breaker-php/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/leocarmo/circuit-breaker-php/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Total Downloads](https://img.shields.io/packagist/dt/leocarmo/circuit-breaker-php.svg)](https://packagist.org/packages/leocarmo/circuit-breaker-php)

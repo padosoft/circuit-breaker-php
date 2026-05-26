@@ -102,8 +102,17 @@ class RedisAdapterTest extends TestCase
 
     public function testIncrementFailureWithKeyWithoutTtlIntegratedRedis()
     {
+        if (! extension_loaded('redis')) {
+            $this->markTestSkipped('Extension redis is required for Redis integration tests.');
+        }
+
+        $host = getenv('REDIS_HOST') ?: null;
+        if ($host === null) {
+            $this->markTestSkipped('REDIS_HOST is required for Redis integration tests.');
+        }
+
         $redis = new \Redis();
-        $redis->connect(getenv('REDIS_HOST'));
+        $redis->connect($host, (int) (getenv('REDIS_PORT') ?: 6379));
 
         $dummy_key = 'circuit-breaker:test-failure:test-service:failures';
 
